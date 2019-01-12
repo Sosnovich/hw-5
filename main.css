@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+@media screen and  (max-width: 577px) {
+    .row {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+    }
+
+    .row label {
+        width: 100%;
+        text-align: left;
+    }
+
+    fieldset,
+    .container {
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 578px) {
+    .row {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .first label {
+        width: 170px;
+        text-align: right;
+    }
+
+    fieldset,
+    .container {
+        margin: 10px 0 10px 170px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding:0;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 768px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.row h1 {
+    width:100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.first input,
+.first select,
+.first textarea {
+    width: 100%;
+    max-width: 578px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.first label {
+    order: -1;
+    flex-shrink: 0;
+    padding: 0 10px 0 0;
+}
+
+fieldset,
+.container {
+    width: 100%;
+    max-width: 578px;
+    padding: 0px;
+    white-space: nowrap;
+}
+
+fieldset span{
+    display: block;
+    margin: 10px 10px;
+}
+
+
+:required ~ label:after {
+    content: '*';
+    color: #f00;
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 16px;
+}
+
+[type="submit"] {
+    width: 100%;
+    max-width: 320px;
+    padding: 10px;
+    border-width: 0;
+    background-color: #0f5bfe;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+}
+
+input, select, textarea, fieldset {
+    border: 2px solid #8eb5fc;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #0f5bfe;
+}
+
+#date {
+    position: relative;
+    background-color: #fff;
+    background-image: url("calendar.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 26px;
+}
+
+::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background-color: transparent;
+}
+
+::-webkit-inner-spin-button {
+    display: none;
+}
+
+.arrow {
+    position: relative;
+}
+
+.arrow:after {
+    content: " ";
+    position: absolute;
+    right: 10px;
+    bottom: 27px;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border: 5px solid;
+    border-color: #000 transparent transparent transparent;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none!important;
+    background: transparent;
+}
+
+#date {
+    position: relative;
+    background-color: #fff;
+    background-image: url("calendar.svg");
+    background-repeat: no-repeat;
+    background-position: 99% center ;
+    background-size: 26px;
+}
